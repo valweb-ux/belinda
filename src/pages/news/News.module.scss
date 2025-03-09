@@ -1,0 +1,55 @@
+@import '../../styles/variables';
+
+.container {
+  max-width: $breakpoint-desktop;
+  margin: 0 auto;
+  padding: 20px;
+
+  h1 {
+    font-size: $font-size-xlarge;
+    color: $color-primary;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .newsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .loadMore {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 30px;
+    background: $color-primary;
+    color: $color-white;
+    border: none;
+    border-radius: 4px;
+    font-size: $font-size-medium;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background: darken($color-primary, 10%);
+    }
+
+    &:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .container {
+    padding: 15px;
+
+    .newsGrid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}
+

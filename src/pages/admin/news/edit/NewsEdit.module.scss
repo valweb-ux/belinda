@@ -1,0 +1,95 @@
+@import '../../../../styles/variables';
+
+.newsEdit {
+  padding: 30px;
+  background: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+
+  h1 {
+    font-size: $font-size-xlarge;
+    color: $color-primary;
+  }
+}
+
+.saveButton {
+  padding: 10px 20px;
+  background: $color-primary;
+  color: $color-white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background: darken($color-primary, 10%);
+  }
+
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+.languageTabs {
+  display: flex;
+  margin-bottom: 20px;
+
+  button {
+    padding: 10px 20px;
+    background: #e0e0e0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background: #d0d0d0;
+    }
+
+    &.active {
+      background: $color-primary;
+      color: $color-white;
+    }
+  }
+}
+
+.form {
+  background: $color-white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+}
+
+.options {
+  display: flex;
+  gap: 20px;
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
