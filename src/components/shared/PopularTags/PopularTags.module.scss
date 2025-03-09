@@ -1,0 +1,20 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: var(--radius);
+  font-size: var(--font-size-sm);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background: var(--primary-hover);
+  }
+}
+

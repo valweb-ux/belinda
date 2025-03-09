@@ -1,0 +1,61 @@
+.schedule {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.programsList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.programCard {
+  display: flex;
+  align-items: center;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.dragHandle {
+  cursor: grab;
+  margin-right: 1rem;
+  color: var(--muted-foreground);
+}
+
+.programInfo {
+  flex: 1;
+}
+
+.time {
+  font-weight: bold;
+  color: var(--primary);
+  margin-right: 0.5rem;
+}
+
+.host {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.actions {
+  margin-left: 1rem;
+}
+
+.saveButton {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+
+  &:hover {
+    background-color: var(--primary-hover);
+  }
+}
+

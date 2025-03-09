@@ -1,0 +1,126 @@
+@import '../../../styles/variables';
+
+.header {
+  background-color: $color-white !important;
+  color: $color-text !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  z-index: 1201 !important;
+
+  .menuButton {
+    margin-right: 16px;
+    color: $color-primary;
+  }
+
+  .title {
+    flex-grow: 1;
+    color: $color-primary;
+    font-weight: 500;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .MuiIconButton-root {
+      color: $color-primary;
+
+      &:hover {
+        background-color: rgba($color-primary, 0.04);
+      }
+    }
+  }
+
+  .profileButton {
+    padding: 4px;
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.menu {
+  .MuiPaper-root {
+    min-width: 200px;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+
+  .MuiMenuItem-root {
+    padding: 12px 16px;
+    gap: 12px;
+
+    &:hover {
+      background-color: rgba($color-primary, 0.04);
+    }
+
+    .menuIcon {
+      color: $color-primary;
+      font-size: 20px;
+    }
+  }
+}
+
+.notificationsMenu {
+  .MuiPaper-root {
+    min-width: 320px;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+
+  .notificationsHeader {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+
+    h6 {
+      margin: 0;
+      color: $color-primary;
+    }
+  }
+
+  .notificationsList {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 8px 0;
+
+    &:empty {
+      padding: 16px;
+      text-align: center;
+      color: $color-text-secondary;
+    }
+  }
+}
+
+// Адаптивність
+@media (max-width: $breakpoint-tablet) {
+  .header {
+    .title {
+      font-size: $font-size-large;
+    }
+  }
+
+  .notificationsMenu {
+    .MuiPaper-root {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .header {
+    .title {
+      font-size: $font-size-medium;
+    }
+
+    .actions {
+      gap: 4px;
+    }
+  }
+}
+

@@ -1,0 +1,224 @@
+@import '../../../styles/variables';
+
+.chat {
+  padding: 30px;
+  background: $color-white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  .title {
+    color: $color-primary;
+    font-size: $font-size-xlarge;
+    margin-bottom: 30px;
+  }
+
+  .alert {
+    margin-bottom: 20px;
+  }
+
+  .messages {
+    height: 600px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: $color-background;
+    border-radius: 8px;
+
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      .MuiCircularProgress-root {
+        color: $color-primary;
+      }
+    }
+
+    .message {
+      margin-bottom: 16px;
+
+      .messageHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4px;
+      }
+
+      .messageContent {
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+
+      .attachments {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 8px;
+
+        .attachment {
+          display: inline-flex;
+          align-items: center;
+          padding: 4px 8px;
+          background: rgba($color-primary, 0.1);
+          border-radius: 4px;
+          color: $color-primary;
+          text-decoration: none;
+          font-size: $font-size-small;
+
+          &:hover {
+            background: rgba($color-primary, 0.2);
+          }
+        }
+      }
+    }
+  }
+
+  .input {
+    position: relative;
+
+    .MuiTextField-root {
+      .MuiOutlinedInput-root {
+        padding-right: 160px;
+        background: $color-white;
+
+        &.Mui-focused {
+          .MuiOutlinedInput-notchedOutline {
+            border-color: $color-primary;
+          }
+        }
+      }
+    }
+
+    .actions {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .MuiIconButton-root {
+        color: $color-text-secondary;
+
+        &:hover {
+          color: $color-primary;
+        }
+
+        &.Mui-disabled {
+          color: rgba($color-text-secondary, 0.5);
+        }
+      }
+
+      .MuiButton-root {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .emojiPicker {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1000;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .menuIcon {
+    margin-right: 8px;
+  }
+
+  .deleteMenuItem {
+    color: $color-error;
+
+    .menuIcon {
+      color: $color-error;
+    }
+
+    &:hover {
+      background-color: rgba($color-error, 0.04);
+    }
+  }
+}
+
+// Адаптивність
+@media (max-width: $breakpoint-tablet) {
+  .chat {
+    padding: 20px;
+
+    .title {
+      font-size: $font-size-large;
+      margin-bottom: 20px;
+    }
+
+    .messages {
+      height: 500px;
+      padding: 16px;
+    }
+
+    .input {
+      .MuiTextField-root {
+        .MuiOutlinedInput-root {
+          padding-right: 120px;
+        }
+      }
+
+      .actions {
+        gap: 4px;
+
+        .MuiIconButton-root {
+          padding: 6px;
+        }
+
+        .MuiButton-root {
+          padding: 6px 12px;
+          font-size: $font-size-small;
+
+          .MuiSvgIcon-root {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .chat {
+    padding: 15px;
+
+    .title {
+      font-size: $font-size-medium;
+      margin-bottom: 15px;
+    }
+
+    .messages {
+      height: 400px;
+      padding: 12px;
+
+      .message {
+        margin-bottom: 12px;
+
+        .messageContent {
+          font-size: $font-size-small;
+        }
+
+        .attachments {
+          .attachment {
+            font-size: $font-size-xsmall;
+          }
+        }
+      }
+    }
+
+    .input {
+      .actions {
+        position: static;
+        margin-top: 8px;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+

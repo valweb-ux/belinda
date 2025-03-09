@@ -1,0 +1,27 @@
+@import '../../../styles/variables';
+
+.languageSwitcher {
+  display: flex;
+  gap: 5px;
+
+  button {
+    padding: 5px 10px;
+    border: 1px solid var(--primary-foreground);
+    background: transparent;
+    color: var(--primary-foreground);
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    &.active {
+      background: var(--primary-foreground);
+      color: var(--primary);
+    }
+  }
+}
+

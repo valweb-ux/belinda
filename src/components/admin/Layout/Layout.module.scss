@@ -1,0 +1,54 @@
+@import '../../../styles/variables';
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 24px;
+  transition: margin-left 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+  
+  &.shifted {
+    margin-left: 240px;
+  }
+}
+
+.toolbar {
+  min-height: 64px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+  .MuiCircularProgress-root {
+    color: $color-primary;
+  }
+}
+
+// Адаптивність
+@media (max-width: $breakpoint-tablet) {
+  .content {
+    padding: 20px;
+    
+    &.shifted {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .content {
+    padding: 16px;
+  }
+  
+  .toolbar {
+    min-height: 56px;
+  }
+}
+

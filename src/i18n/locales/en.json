@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "title": "Chérie FM - Feel good music",
+    "description": "Chérie FM - Ukrainian radio for women. Good music, interesting news, useful tips."
+  },
+  "menu": {
+    "home": "Home",
+    "news": "News",
+    "programs": "Programs",
+    "artists": "Artists",
+    "music": "Music",
+    "support": "Support"
+  },
+  "player": {
+    "play": "Play",
+    "pause": "Pause",
+    "nowPlaying": "Now Playing"
+  },
+  "footer": {
+    "country": "Ukraine",
+    "navigation": "Navigation",
+    "social": "Social Media",
+    "info": "Information",
+    "about": "About Us",
+    "contacts": "Contacts",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "rights": "All rights reserved",
+    "developed": "Developed with ❤️"
+  },
+  "horoscope": {
+    "title": "Horoscope",
+    "signs": {
+      "aries": "Aries",
+      "taurus": "Taurus",
+      "gemini": "Gemini",
+      "cancer": "Cancer",
+      "leo": "Leo",
+      "virgo": "Virgo",
+      "libra": "Libra",
+      "scorpio": "Scorpio",
+      "sagittarius": "Sagittarius",
+      "capricorn": "Capricorn",
+      "aquarius": "Aquarius",
+      "pisces": "Pisces"
+    }
+  }
+}
+

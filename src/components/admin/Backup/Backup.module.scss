@@ -1,0 +1,173 @@
+@import '../../../styles/variables';
+
+.backup {
+  padding: 30px;
+  background: $color-white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    h2 {
+      color: $color-primary;
+      font-size: $font-size-xlarge;
+      margin: 0;
+    }
+  }
+
+  .alert {
+    margin-bottom: 20px;
+  }
+
+  .typeIcon {
+    color: $color-primary;
+    font-size: 20px;
+  }
+
+  .status {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: $font-size-small;
+    font-weight: 500;
+
+    &.completed {
+      background-color: rgba($color-success, 0.1);
+      color: $color-success;
+    }
+
+    &.failed {
+      background-color: rgba($color-error, 0.1);
+      color: $color-error;
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+
+    .MuiIconButton-root {
+      &:hover {
+        background-color: rgba($color-primary, 0.04);
+      }
+
+      &.Mui-disabled {
+        color: rgba(0, 0, 0, 0.26);
+      }
+
+      &[color="error"] {
+        &:hover {
+          background-color: rgba($color-error, 0.04);
+        }
+      }
+    }
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+
+    .MuiCircularProgress-root {
+      color: $color-primary;
+    }
+  }
+
+  .MuiTableContainer-root {
+    .MuiTable-root {
+      .MuiTableHead-root {
+        .MuiTableRow-root {
+          .MuiTableCell-root {
+            background-color: #f5f5f5;
+            font-weight: 600;
+            color: $color-text;
+          }
+        }
+      }
+
+      .MuiTableBody-root {
+        .MuiTableRow-root {
+          &:hover {
+            background-color: rgba($color-primary, 0.02);
+          }
+
+          .MuiTableCell-root {
+            color: $color-text;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Адаптивність
+@media (max-width: $breakpoint-tablet) {
+  .backup {
+    padding: 20px;
+
+    .header {
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: $font-size-large;
+      }
+
+      .MuiButton-root {
+        padding: 6px 16px;
+      }
+    }
+
+    .typeIcon {
+      font-size: 18px;
+    }
+
+    .actions {
+      .MuiIconButton-root {
+        padding: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .backup {
+    padding: 15px;
+
+    .header {
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 15px;
+
+      h2 {
+        font-size: $font-size-medium;
+      }
+
+      .MuiButton-root {
+        width: 100%;
+      }
+    }
+
+    .MuiTableContainer-root {
+      .MuiTable-root {
+        .MuiTableCell-root {
+          padding: 8px;
+          font-size: $font-size-small;
+        }
+      }
+    }
+
+    .actions {
+      .MuiIconButton-root {
+        padding: 6px;
+      }
+    }
+  }
+}
+

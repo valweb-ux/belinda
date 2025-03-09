@@ -1,0 +1,120 @@
+@import '../../../styles/variables';
+
+.header {
+  width: 100%;
+  background: var(--background);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+  .topBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    
+    .socialLinks {
+      display: flex;
+      gap: 20px;
+      
+      a {
+        color: var(--primary-foreground);
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    .rightSection {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+  }
+  
+  .mainNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+    .logo {
+      img {
+        height: 60px;
+      }
+      
+      .slogan {
+        font-size: $font-size-small;
+        color: var(--primary);
+      }
+    }
+    
+    .navigation {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        font-size: $font-size-medium;
+        
+        &:hover {
+          color: var(--primary-foreground);
+        }
+      }
+      
+      .supportButton {
+        background: var(--primary);
+        color: var(--primary-foreground);
+        padding: 10px 20px;
+        border-radius: 5px;
+        
+        &:hover {
+          background: var(--secondary);
+        }
+      }
+    }
+  }
+
+  .playerWrapper {
+    padding: 0 20px 20px;
+  }
+}
+
+// Mobile version
+@media (max-width: $breakpoint-mobile) {
+  .header {
+    .topBar {
+      flex-direction: column;
+      gap: 10px;
+      
+      .rightSection {
+        justify-content: center;
+      }
+    }
+    
+    .mainNav {
+      flex-direction: column;
+      gap: 20px;
+      
+      .navigation {
+        flex-direction: column;
+        width: 100%;
+        
+        a {
+          width: 100%;
+          text-align: center;
+          padding: 10px 0;
+          border-bottom: 1px solid var(--accent);
+        }
+      }
+    }
+
+    .playerWrapper {
+      padding: 20px;
+    }
+  }
+}
+
