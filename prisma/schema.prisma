@@ -1,0 +1,35 @@
+model SiteSettings {
+  id                Int      @id @default(1)
+  siteName          String
+  description       Json
+  contactEmail      String
+  socialLinks       Json
+  streamUrl         String
+  analyticsId       String?
+  maintenance       Boolean  @default(false)
+  maintenanceMessage Json
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("site_settings")
+}
+
+model SecuritySettings {
+  id                Int      @id @default(1)
+  twoFactorAuth     Boolean  @default(false)
+  passwordPolicy    Json
+  sessionTimeout    Int      @default(30)
+  ipWhitelist       String[]
+  loginAttempts     Json
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model AdminLog {
+  id        Int      @id @default(autoincrement())
+  action    String
+  adminId   String
+  details   String
+  createdAt DateTime @default(now())
+}
+
